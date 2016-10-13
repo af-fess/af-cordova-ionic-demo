@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/maxim/Appsflyer/projects/DEMOS/AfCordovaDemo2/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="cf349bc1ddc57102db7b689542748d5dbb38f734">
+        <dex dex="/Users/maxim/Appsflyer/projects/DEMOS/AfCordovaDemo2/platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-unspecified-debug_fddab153fd0ac200a8ac2136e0efabbeae7e34c7.jar" />
+    </item>
+
+</items>

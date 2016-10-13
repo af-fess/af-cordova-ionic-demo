@@ -1,0 +1,122 @@
+<ion-view view-title="Dashboard">
+
+<h2>HELLO FESS</h2>
+  
+    <!-- STATE WHEN ANDROID AND WIFI IS DISABLED -->
+    <div ng-if="$root.isAndroidReady === true && config.isWifiEnabled === false"
+         style="height:100%; width:100%; background-color:transparent;">
+
+        <ion-content class="padding has-header">
+
+            <div class="row">
+                <div class="aa-wifi-title">Wifi is disabled</div>
+            </div>
+
+            <div class="row" style="margin-top: 30px;">
+                <button class="aa-button col button waves-effect waves-light" 
+                        ng-click="enableWifi()"
+                        style="display: block;
+                        width: 200px;
+                        margin: 0 auto;"
+                        >Enable Wifi</button>
+            </div>
+        </ion-content>
+
+    </div>
+
+
+
+
+
+    <!-- STATE WHEN ANDROID,  WIFI IS ENABLED -->
+    <div ng-if="$root.isAndroidReady === true && config.isWifiEnabled === true"
+         style="height:100%; width:100%; background-color:transparent;">
+
+        <ion-content class="padding has-header">
+
+            <div class="row">
+                <div class="aa-wifi-title">Choose a network</div>
+            </div>
+
+
+
+            <ion-content class="scroll-content ionic-scroll overflow-scroll " 
+                         style="background-color:transparent;top: 46px;min-height: 300px;bottom:70px;" >
+
+
+
+                <div ng-hide="(wifiList).length" style="text-align: center;">
+                    <br><br>
+
+                    <br><br>
+                    <ion-spinner class="spinner-assertive"></ion-spinner>
+                    <br><br>
+                </div>
+                <ion-list>
+                    <ion-item class="item-icon-right waves-effect waves-light" ng-repeat="wifi in wifiList"
+                              style="padding: 5px 5px 5px 25px;display: block;"
+                              ng-click="onAPClick(wifi);"
+                              >
+                        <h2 class="ion-wifi">
+                            {{wifi}}
+                        </h2>
+                    </ion-item>
+                </ion-list>
+
+
+            </ion-content>
+            <div style="position: absolute;
+                 bottom: 0;width: 100%;">
+                <button class="aa-button col button waves-effect waves-light" 
+                        ng-click="getList()"
+                        style="display: block;font-size: 21px;
+                        width: 200px;
+                        margin: 0 auto;"
+                        >Refresh WiFi List</button>
+            </div>
+        </ion-content>
+
+    </div>
+
+
+    <!-- STATE WHEN iOS -->
+    <div ng-if="$root.isIOSReady === true"
+         style="height:100%; width:100%; background-color:transparent;">
+
+        <ion-content class="padding has-header">
+
+            <div class="row">
+                <div class="aa-wifi-title">Select your private network</div>
+            </div>
+
+            <ion-content class="scroll-content ionic-scroll overflow-scroll " 
+                         style="background-color:transparent;top: 46px;min-height: 300px;bottom:70px;" >
+
+                <div ng-show="ios_wifi_not_available === false"
+                     class="item-icon-right waves-effect waves-light"
+                              style="padding: 5px 5px 5px 25px;display: block;"
+                              ng-click="onAPClick(SSID);"
+                              >
+                        <p class="ion-wifi" style="font-size: 24px;color: white;">
+                            {{SSID}}
+                        </p>
+                    </div>
+                
+                
+                <div ng-show="ios_wifi_not_available === true"
+                     class="row" style="margin-top: 30px;">
+                    <button class="aa-button col button waves-effect waves-light" 
+                            ng-click="wifiStateClick()"
+                            style="display: block;
+                        width: 200px;
+                        margin: 0 auto;"
+                            >Enable Wifi and connect</button>
+                </div>
+                
+
+            </ion-content>
+            
+        </ion-content>
+    </div>
+
+</ion-view>
