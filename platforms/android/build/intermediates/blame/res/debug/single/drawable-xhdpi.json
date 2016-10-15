@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/maxim/Appsflyer/projects/af-cordova-ionic-demo/platforms/android/build/intermediates/res/merged/debug/drawable-xhdpi/icon.png",
+        "source": "/Users/maxim/Appsflyer/projects/af-cordova-ionic-demo/platforms/android/res/drawable-xhdpi/icon.png"
+    },
+    {
         "merged": "/Users/maxim/Appsflyer/projects/DEMOS/AfCordovaDemo2/platforms/android/build/intermediates/res/merged/debug/drawable-xhdpi/icon.png",
         "source": "/Users/maxim/Appsflyer/projects/DEMOS/AfCordovaDemo2/platforms/android/res/drawable-xhdpi/icon.png"
     }
