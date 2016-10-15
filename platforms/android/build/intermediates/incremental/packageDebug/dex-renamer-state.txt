@@ -1,4 +1,4 @@
-#Wed Oct 12 13:20:40 IDT 2016
-base.0=/Users/maxim/Appsflyer/projects/DEMOS/AfCordovaDemo2/platforms/android/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+#Sat Oct 15 14:27:53 IDT 2016
+base.0=/Users/maxim/Appsflyer/projects/af-cordova-ionic-demo/platforms/android/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
-file.0=/Users/maxim/Appsflyer/projects/DEMOS/AfCordovaDemo2/platforms/android/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
+file.0=/Users/maxim/Appsflyer/projects/af-cordova-ionic-demo/platforms/android/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

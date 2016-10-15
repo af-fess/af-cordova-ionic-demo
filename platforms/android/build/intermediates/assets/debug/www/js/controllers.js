@@ -48,10 +48,6 @@ app.controller('DashCtrl', function (
 
     function run() {
         
-//        
-//          $timeout(function () {
-//            checkIosNetwork();
-//        }, 5000);
         
          if($rootScope.isAndroidReady === true){
              isWifiEnabled();
@@ -244,4 +240,6 @@ app.controller('AccountCtrl', function($scope) {
   $scope.settings = {
     enableFriends: true
   };
+  
+  
 });

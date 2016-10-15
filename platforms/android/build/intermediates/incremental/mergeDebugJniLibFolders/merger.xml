@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/maxim/Appsflyer/projects/DEMOS/AfCordovaDemo2/platforms/android/libs"/></dataSet><dataSet config="debug"><source path="/Users/maxim/Appsflyer/projects/DEMOS/AfCordovaDemo2/platforms/android/src/debug/jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/maxim/Appsflyer/projects/af-cordova-ionic-demo/platforms/android/libs"><file name="AF-Android-SDK.jar" path="/Users/maxim/Appsflyer/projects/af-cordova-ionic-demo/platforms/android/libs/AF-Android-SDK.jar"/></source></dataSet><dataSet config="debug"><source path="/Users/maxim/Appsflyer/projects/af-cordova-ionic-demo/platforms/android/src/debug/jniLibs"/></dataSet></merger>

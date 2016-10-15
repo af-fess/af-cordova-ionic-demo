@@ -64,6 +64,14 @@ module.exports = [
         "clobbers": [
             "window.plugins.appsFlyer"
         ]
+    },
+    {
+        "file": "plugins/com.appsflyer.phonegap.plugins.appsflyer/www/AppsFlyerError.js",
+        "id": "com.appsflyer.phonegap.plugins.appsflyer.AppsFlyerError",
+        "pluginId": "com.appsflyer.phonegap.plugins.appsflyer",
+        "clobbers": [
+            "AppsFlyerError"
+        ]
     }
 ];
 module.exports.metadata = 

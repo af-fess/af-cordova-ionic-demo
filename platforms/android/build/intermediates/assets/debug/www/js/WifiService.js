@@ -1,3 +1,5 @@
+'use strict';
+
 app.factory('WifiService', function ($rootScope) {
     
     var unique_array = angular.fromJson('[]');
