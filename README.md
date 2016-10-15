@@ -13,12 +13,12 @@ platforms
    -  Xcode `8`
 
 
-Build
+How to build
 ---------
 
  1. install globally ionic and cordova:
 `npm install -g cordova ionic`    (may require sudo)
-2. install dependances (for ionic):
+ 2. install dependances (for ionic):
     `npm install`
  3. `cd to af-cordova-ionic-demo`
  4. add android to platforms list:
@@ -30,14 +30,18 @@ Build
 `ionic build android`
 or both:
 `ionic build`
-7. check plugin status:
+ 7. check plugin status:
 `cordova plugin list`
 
 **Android**
+
 Now you can open project in Visual Studio (target it to `af-cordova-ionic-demo/platforms/android`) 
 
 **iOS**
+
 Open project `af-cordova-ionic-demo/platforms/ios/af-cordova-ionic-demo.xcodeproj` in Xcode
+
+----------
 
 API Methods
 ===================
