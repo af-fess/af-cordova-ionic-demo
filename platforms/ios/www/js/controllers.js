@@ -47,6 +47,8 @@ app.controller('DashCtrl', function (
     $scope.ios_wifi_not_available = false;
 
     function run() {
+        
+        
          if($rootScope.isAndroidReady === true){
              isWifiEnabled();
          }
@@ -208,8 +210,11 @@ app.controller('DashCtrl', function (
 
 
     });
-
-    run();
+    
+    $scope.$on("ionicPlatformReady", function () {        
+        run();
+    });
+    
   });
 
 app.controller('ChatsCtrl', function($scope, Chats) {

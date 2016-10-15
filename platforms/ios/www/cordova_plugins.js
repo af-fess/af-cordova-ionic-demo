@@ -56,6 +56,14 @@ module.exports = [
         "clobbers": [
             "window.WifiWizard"
         ]
+    },
+    {
+        "file": "plugins/com.appsflyer.phonegap.plugins.appsflyer/www/appsflyer.js",
+        "id": "com.appsflyer.phonegap.plugins.appsflyer.appsflyer",
+        "pluginId": "com.appsflyer.phonegap.plugins.appsflyer",
+        "clobbers": [
+            "window.plugins.appsFlyer"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -67,7 +75,8 @@ module.exports.metadata =
     "cordova-plugin-statusbar": "2.2.0",
     "cordova-plugin-whitelist": "1.3.0",
     "ionic-plugin-keyboard": "2.2.1",
-    "com.pylonproducts.wifiwizard": "0.2.11"
+    "com.pylonproducts.wifiwizard": "0.2.11",
+    "com.appsflyer.phonegap.plugins.appsflyer": "4.0"
 }
 // BOTTOM OF METADATA
 });

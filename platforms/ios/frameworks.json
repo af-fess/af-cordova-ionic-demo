@@ -1,3 +1,6 @@
 {
-    "SystemConfiguration.framework": 1
+    "SystemConfiguration.framework": 1,
+    "AdSupport.framework": 1,
+    "iAd.framework": 1,
+    "Security.framework": 1
 }

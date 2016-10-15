@@ -39,6 +39,10 @@
                         {
                             "xml": "<feature name=\"WifiWizard\"><param name=\"ios-package\" value=\"NXWWifiWizard\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AppsFlyerPlugin\"><param name=\"ios-package\" value=\"AppsFlyerPlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -66,6 +70,9 @@
         },
         "com.pylonproducts.wifiwizard": {
             "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "com.appsflyer.phonegap.plugins.appsflyer": {
+            "PACKAGE_NAME": "com.ionicframework.afcordovademo2229669"
         }
     },
     "dependent_plugins": {},
@@ -126,6 +133,14 @@
             "clobbers": [
                 "window.WifiWizard"
             ]
+        },
+        {
+            "file": "plugins/com.appsflyer.phonegap.plugins.appsflyer/www/appsflyer.js",
+            "id": "com.appsflyer.phonegap.plugins.appsflyer.appsflyer",
+            "pluginId": "com.appsflyer.phonegap.plugins.appsflyer",
+            "clobbers": [
+                "window.plugins.appsFlyer"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -135,6 +150,7 @@
         "cordova-plugin-statusbar": "2.2.0",
         "cordova-plugin-whitelist": "1.3.0",
         "ionic-plugin-keyboard": "2.2.1",
-        "com.pylonproducts.wifiwizard": "0.2.11"
+        "com.pylonproducts.wifiwizard": "0.2.11",
+        "com.appsflyer.phonegap.plugins.appsflyer": "4.0"
     }
 }

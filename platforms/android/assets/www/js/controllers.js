@@ -48,10 +48,6 @@ app.controller('DashCtrl', function (
 
     function run() {
         
-//        
-//          $timeout(function () {
-//            checkIosNetwork();
-//        }, 5000);
         
          if($rootScope.isAndroidReady === true){
              isWifiEnabled();

@@ -54,5 +54,13 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "com.appsflyer.phonegap.plugins.appsflyer": {
+        "source": {
+            "type": "local",
+            "path": "../PhoneGap"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

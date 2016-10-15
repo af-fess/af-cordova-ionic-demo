@@ -27,6 +27,9 @@
         },
         "com.pylonproducts.wifiwizard": {
             "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "com.appsflyer.phonegap.plugins.appsflyer": {
+            "PACKAGE_NAME": "com.ionicframework.afcordovademo2229669"
         }
     },
     "dependent_plugins": {}

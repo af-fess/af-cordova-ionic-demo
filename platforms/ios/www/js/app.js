@@ -31,6 +31,40 @@ app.run(function($ionicPlatform, $rootScope) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+    
+    $rootScope.$broadcast("ionicPlatformReady", {});    
+    
+    
+    // $timeout(function(){
+
+             if (window.plugins.appsFlyer !== undefined) {
+            
+            console.log('appsFlyer 1');
+            
+            var appsFlyerOptions = [];
+            var devKey = 'WdpTVAcYwmxsaQ4WeTspmh';
+            appsFlyerOptions.push(devKey);
+            
+            
+            if (ionic.Platform.isIOS()){
+                
+                console.log('appsFlyer 2');
+                
+                var appId = "1008237086";
+                appsFlyerOptions.push(appId);
+            }
+            
+            console.log('appId != null ' + (appId !== null));
+
+            if (ionic.Platform.isAndroid() || (appId !== null)){
+                console.log('Initialised appsFlyer');
+                window.plugins.appsFlyer.initSdk(appsFlyerOptions);
+            }
+
+        }
+            //},5000); 
+    
+    
   });
 });
 

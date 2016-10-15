@@ -88,6 +88,7 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
+apply from: "com.appsflyer.phonegap.plugins.appsflyer/afcordovademo2229669-cordovaAF.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
