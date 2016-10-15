@@ -1,12 +1,3 @@
-
-
-af-cordova-ionic-demo
-===================
-This is Cordova+Ionic project that demonstrates detailed usage of  [AppsFlyer plugin](https://github.com/AppsFlyerSDK/PhoneGap) 
-
-
-
-
 Environment
 ===================
  `Cordova 6.3.1`
@@ -22,6 +13,31 @@ platforms
    -  Xcode `8`
 
 
+Build
+---------
+
+ 1. install globally ionic and cordova:
+`npm install -g cordova ionic`    (may require sudo)
+2. install dependances (for ionic):
+    `npm install`
+ 3. `cd to af-cordova-ionic-demo`
+ 4. add android to platforms list:
+ `ionic platform add android`
+ 5. add ios to platforms list (might drop error that ios is already installed):
+ `ionic platform add ios`
+ 6. build Android and iOS:
+`ionic build ios`
+`ionic build android`
+or both:
+`ionic build`
+7. check plugin status:
+`cordova plugin list`
+
+**Android**
+Now you can open project in Visual Studio (target it to `af-cordova-ionic-demo/platforms/android`) 
+
+**iOS**
+Open project `af-cordova-ionic-demo/platforms/ios/af-cordova-ionic-demo.xcodeproj` in Xcode
 
 API Methods
 ===================
@@ -31,8 +47,7 @@ Establishes connection with the remote host.
 | parameter   | type                        | description |
 | ----------- |-----------------------------|--------------|
 | `options`   | `List`                      | |
-| `onSuccess` | `() => void`                | Success callback - not supported (optional)|
-| `onError`   | `(message: string) => void` | Error callback - not supported  (optional)|
+
 
 **Example**
 
@@ -53,6 +68,7 @@ Establishes connection with the remote host.
 	       }
      }
    ```
+
 
 
 
