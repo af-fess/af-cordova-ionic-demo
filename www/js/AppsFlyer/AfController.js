@@ -1,12 +1,8 @@
 'use strict';
 
 app.controller('AppsFlyerCtrl', function (
-        $scope,
-        $rootScope,
-        $ionicModal,
-        $log,
-        $timeout,
-        AppsFlyerService)
+        $scope,   
+         AppsFlyerService)
 {
 
     function run() {
