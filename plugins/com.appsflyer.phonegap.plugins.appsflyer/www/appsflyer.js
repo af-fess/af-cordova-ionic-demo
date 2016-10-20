@@ -1,8 +1,8 @@
 
     var exec = require('cordova/exec'),
-    argscheck = require('cordova/argscheck'),
-    AppsFlyerError = require('./AppsFlyerError')
-
+        argscheck = require('cordova/argscheck'),
+        AppsFlyerError = require('./AppsFlyerError');
+    
 
     if (!window.CustomEvent) {
         window.CustomEvent = function (type, config) {
@@ -15,29 +15,45 @@
     (function (global) {
         var AppsFlyer = function () {};
 
-        AppsFlyer.prototype.initSdk = function (args) {
+        AppsFlyer.prototype.initSdk = function (args, successCB, errorCB) {
+            argscheck.checkArgs('O', 'AppsFlyer.initSdk', arguments);
 
-            argscheck.checkArgs('fF', 'AppsFlyer.initSdk', arguments);
+        if (!args) {
+            if (errorCB) {
+                errorCB(AppsFlyerError.INVALID_ARGUMENT_ERROR);                
+            }
+        } else {
+            if(args.appId !== undefined && typeof args.appId != 'string'){
+                if (errorCB) {
+                  errorCB(AppsFlyerError.APPID_NOT_VALID);
+               }
+             }
 
-            exec(null, null, "AppsFlyerPlugin", "initSdk", args);
+             exec(successCB, errorCB, "AppsFlyerPlugin", "initSdk", [args]);    
+          }           
         };
 
         AppsFlyer.prototype.setCurrencyCode = function (currencyId) {
+            argscheck.checkArgs('S', 'AppsFlyer.setCurrencyCode', arguments);
             exec(null, null, "AppsFlyerPlugin", "setCurrencyCode", [currencyId]);
         };
 
         AppsFlyer.prototype.setAppUserId = function (customerUserId) {
+             argscheck.checkArgs('S', 'AppsFlyer.setAppUserId', arguments);
             exec(null, null, "AppsFlyerPlugin", "setAppUserId", [customerUserId]);
         };
         AppsFlyer.prototype.setGCMProjectID = function (GCMProjectID) {
+            argscheck.checkArgs('S', 'AppsFlyer.setGCMProjectID', arguments);
             exec(null, null, "AppsFlyerPlugin", "setGCMProjectID", [GCMProjectID]);
         };
         AppsFlyer.prototype.registerUninstall = function (token) {
+            argscheck.checkArgs('S', 'AppsFlyer.registerUninstall', arguments);
             exec(null, null, "AppsFlyerPlugin", "registerUninstall", [token]);
         };
-        AppsFlyer.prototype.getAppsFlyerUID = function (callbackFn) {
+        AppsFlyer.prototype.getAppsFlyerUID = function (successCB) {
+            argscheck.checkArgs('F', 'AppsFlyer.getAppsFlyerUID', arguments);
             exec(function (result) {
-                callbackFn(result);
+                successCB(result);
             }, null,
                     "AppsFlyerPlugin",
                     "getAppsFlyerUID",
@@ -45,6 +61,7 @@
         };
 
         AppsFlyer.prototype.trackEvent = function (eventName, eventValue) {
+            argscheck.checkArgs('SO', 'AppsFlyer.trackEvent', arguments);
             exec(null, null, "AppsFlyerPlugin", "trackEvent", [eventName, eventValue]);
         };
 

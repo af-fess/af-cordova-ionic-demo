@@ -1,8 +1,9 @@
 {
     "cordova-plugin-device": {
         "source": {
-            "type": "registry",
-            "id": "cordova-plugin-device"
+            "type": "git",
+            "url": "http://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}
@@ -55,10 +56,35 @@
         "is_top_level": true,
         "variables": {}
     },
-    "com.appsflyer.phonegap.plugins.appsflyer": {
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-compat"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-test-framework": {
+        "source": {
+            "type": "git",
+            "url": "http://git-wip-us.apache.org/repos/asf/cordova-plugin-test-framework.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.appsflyer.phonegap.plugins.appsflyer.tests": {
         "source": {
             "type": "local",
-            "path": "../PhoneGap"
+            "path": "../PhoneGap/tests"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.appsflyer.phonegap.plugins.appsflyer": {
+        "source": {
+            "type": "registry",
+            "id": "appsflyer"
         },
         "is_top_level": true,
         "variables": {}

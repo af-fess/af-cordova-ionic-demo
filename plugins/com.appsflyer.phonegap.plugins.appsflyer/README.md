@@ -1,6 +1,6 @@
 
 
-# Cordova/PhoneGap AppsFlyer plugin for Android and iOS. 
+# Cordova/PhoneGap AppsFlyer plugin for Android and iOS. (v4.2.3)
 
 ## Supported Platforms
 
@@ -9,6 +9,11 @@
 
  `Cordova >= 4.3.x.`
 
+
+## This plugin is built for
+
+- iOS AppsFlyerSDK **v4.5.9**
+- Android AppsFlyerSDK **v4.6.0**
 
 
 ## Installation using CLI:
@@ -144,3 +149,93 @@ document.addEventListener('onInstallConversionDataLoaded', function(e){
     alert(attributionData);
 }, false);
 ```
+
+API Methods
+===================
+**`initSdk(options, onSuccess, onError): void`**
+
+initialize the SDK.
+
+| parameter   | type                        | description  |
+| ----------- |-----------------------------|--------------|
+| `options`   | `Object`                    |   SDK configuration           |
+| `onSuccess` | `(message: string)=>void` | Success callback - called after successfull SDK initiation. (optional)|
+| `onError`   | `(message: string)=>void` | Error callback - called when error occurs during initialization. (optional)|
+
+**`options`**
+
+| name       | type    | default | description            |
+| -----------|---------|---------|------------------------|
+| `devKey`   |`string` |         |   [Appsflyer Dev key](https://support.appsflyer.com/hc/en-us/articles/207032126-AppsFlyer-SDK-Integration-Android)    |
+| `appId`    |`string` |        | [Apple Application ID](https://support.appsflyer.com/hc/en-us/articles/207032066-AppsFlyer-SDK-Integration-iOS) (for iOS only) |
+| `isDebug`  |`boolean`| `true` | debug mode (optional)|
+
+*Example:*
+
+```
+var onSuccess = function(result) {
+     //handle result
+};
+
+function onError(err) {
+    // handle error
+}
+var options = {
+               devKey:  'd3Ac9qPnrpVYZxfWmCspwL',
+               appId: '123456789',
+               isDebug: false
+             };
+window.plugins.appsFlyer.initSdk(options, onSuccess, onError);
+```
+
+**`setCurrencyCode(currencyId): void`**
+
+| parameter   | type                        | description |
+| ----------- |-----------------------------|--------------|
+| `currencyId`   | `String`                      | |
+
+**`setAppUserId(customerUserId): void`**
+
+ set your Customer User ID.
+
+| parameter   | type                        | description |
+| ----------- |-----------------------------|--------------|
+| `customerUserId`   | `String`                      | |
+
+**`setGCMProjectID(GCMProjectID): void`**
+
+Set the GCM API key. AppsFlyer requires a Google Project Number and GCM API Key to enable uninstall tracking.
+
+| parameter   | type                        | description |
+| ----------- |-----------------------------|--------------|
+| `GCMProjectID`   | `String`                      | |
+
+**`registerUninstall(token): void`**
+
+AEnables tracking app. uninstalls.
+
+| parameter   | type                        | description |
+| ----------- |-----------------------------|--------------|
+| `token`   | `String`                      | |
+
+**`getAppsFlyerUID(successCB): void`**
+
+| parameter   | type                        | description |
+| ----------- |-----------------------------|--------------|
+| `successCB` | `() => void`                | Success callback |
+
+**`trackEvent(eventName, eventValue): void`**
+
+Tracking in-app events helps you measure and analyze how loyal users discover your app, and attribute them to specific campaigns/media sources. It is recommended to take the time and define the events you want to measure to allow you to track ROI (Return on Investment) and LTV (Lifetime Value).
+
+| parameter   | type                        | description |
+| ----------- |-----------------------------|--------------|
+| `eventName` | `String`                    |  |
+| `eventValue` | `Object`                    |  |
+
+
+**`onInstallConversionDataLoaded(conversionData): void`**
+
+| parameter   | type                        | description |
+| ----------- |-----------------------------|--------------|
+| `conversionData` | `Object`                    |  |

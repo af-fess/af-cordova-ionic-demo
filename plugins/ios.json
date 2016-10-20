@@ -28,8 +28,14 @@
         "com.pylonproducts.wifiwizard": {
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
-        "com.appsflyer.phonegap.plugins.appsflyer": {
+        "cordova-plugin-test-framework": {
             "PACKAGE_NAME": "com.ionicframework.afcordovademo2229669"
+        },
+        "com.appsflyer.phonegap.plugins.appsflyer.tests": {
+            "PACKAGE_NAME": "com.appsflyerionicframework.afcordovademo2229669"
+        },
+        "com.appsflyer.phonegap.plugins.appsflyer": {
+            "PACKAGE_NAME": "com.appsflyerionicframework.afcordovademo2229669"
         }
     },
     "dependent_plugins": {}
