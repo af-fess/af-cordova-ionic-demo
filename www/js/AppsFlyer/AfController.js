@@ -13,26 +13,8 @@ app.controller('AppsFlyerCtrl', function (
 
         console.log('start AppsFlyerCtrl');
 
-//        var appsFlyerOptions = [];
-//        var devKey = 'd3Ac9qPnrpXYZxfWmCdpwL';//'WdpTVAcYwmxsaQ4WeTspmh';
-//        appsFlyerOptions.push(devKey);
-//
-//
-//        if (ionic.Platform.isIOS()) {
-//
-//            var appId = "1008237086";
-//            appsFlyerOptions.push(appId);
-//        }
-//
-//        console.log('appId != null ' + (appId !== null));
-//
-//        if (ionic.Platform.isAndroid() || (appId !== null)) {
-//            console.log('Initialised appsFlyer');
-//            window.plugins.appsFlyer.initSdk(appsFlyerOptions);
-//        }
-
         var options = {
-           devKey:  'WdpTVAcYwmxsaQ4WeTspmh'//'WdpTVAcYwmxsaQ4WeTspmh',
+           devKey:  'WdpTVAcYwmxsaQ4WeTspmh'
           // isDebug: false // (optional, default - true)
         };
         
