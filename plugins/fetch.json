@@ -83,8 +83,8 @@
     },
     "com.appsflyer.phonegap.plugins.appsflyer": {
         "source": {
-            "type": "registry",
-            "id": "appsflyer"
+            "type": "local",
+            "path": "../PhoneGap"
         },
         "is_top_level": true,
         "variables": {}

@@ -2,6 +2,7 @@
 
 app.controller('AppsFlyerCtrl', function (
         $scope,   
+        //$timeout,
          AppsFlyerService)
 {
 
@@ -31,8 +32,9 @@ app.controller('AppsFlyerCtrl', function (
             );
         }
         
-        
-        
+        // $timeout(function () {
+        //     run();
+        // }, 8000);
         
     }
 

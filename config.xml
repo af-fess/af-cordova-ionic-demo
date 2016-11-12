@@ -79,5 +79,5 @@
         <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
     </platform>
     <plugin name="com.appsflyer.phonegap.plugins.appsflyer.tests" spec="../PhoneGap/tests" />
-    <plugin name="com.appsflyer.phonegap.plugins.appsflyer" spec="~4.2.3" />
+    <plugin name="com.appsflyer.phonegap.plugins.appsflyer" spec="../PhoneGap" />
 </widget>
