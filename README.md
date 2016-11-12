@@ -1,6 +1,6 @@
 <img src="https://www.appsflyer.com/wp-content/themes/ohav-child/images/logo.svg"  width="200">
 
-af-cordova-ionic-demo
+af-cordova-ionic-demo [![Build Status](https://travis-ci.org/af-fess/af-cordova-ionic-demo.svg?branch=master)](https://travis-ci.org/af-fess/af-cordova-ionic-demo)
 ===================
 This is **Cordova+Ionic** project that demonstrates detailed usage of  [AppsFlyer plugin](https://github.com/AppsFlyerSDK/PhoneGap)  with some unitesting (Jasmine)
 
