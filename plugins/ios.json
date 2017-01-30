@@ -25,9 +25,6 @@
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
-        "com.pylonproducts.wifiwizard": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
-        },
         "cordova-plugin-test-framework": {
             "PACKAGE_NAME": "com.ionicframework.afcordovademo2229669"
         },
@@ -35,6 +32,9 @@
             "PACKAGE_NAME": "com.appsflyerionicframework.afcordovademo2229669"
         },
         "com.appsflyer.phonegap.plugins.appsflyer": {
+            "PACKAGE_NAME": "com.appsflyerionicframework.afcordovademo2229669"
+        },
+        "cordova-plugin-bluetooth-serial": {
             "PACKAGE_NAME": "com.appsflyerionicframework.afcordovademo2229669"
         }
     },

@@ -1,0 +1,137 @@
+<ion-view view-title="Bluetooth">
+    
+    <ion-content class="padding" scroll="true" style="margin-top: 0px;padding-top: 0;" >
+        <div style="width:100%; height:100%;">
+   
+        <div class="row" style="margin-top: 5px;border-bottom: solid 1px black;">            
+            <div class="col-40" >
+                <button  class="button button-calm" ng-click="isEnabled()"
+                    style="display: block;
+                    font-size: 12px;
+                    margin: 0 auto;"
+                    >Is Bluetooth Enabled</button>
+            </div>
+            
+            <div class="col-60" >
+                <pre style="font-size: 8px">{{theModel.isEnabled}}</pre>
+            </div>
+        </div>
+        
+        <div class="row" style="margin-top: 5px;border-bottom: solid 1px black;">            
+            <div class="col-25" >
+                <button class="button button-royal"
+                    ng-click="getList()"
+                     style="display: block;
+                    font-size: 12px;
+                    margin: 0 auto;"
+                    >getList</button>
+            </div>
+            
+            <div class="col-75" >
+                <ion-list>
+                    <ion-item class="item-icon-right waves-effect waves-light" ng-repeat="bt in theModel.bluetoothList"
+                              style="padding: 5px 5px 3px 0px;height:40px;display: block;"
+                              ng-click="onBluetoothClick(bt);"
+                              >
+                        <p class="ion-wifi">
+                            {{bt.name}} - {{bt.id}}
+                        </p>
+                        
+                        
+                        
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>
+            
+            <div class="row" style="margin-top: 5px;border-bottom: solid 1px black;">            
+            <div class="col-25" >
+                <button class="button button-royal"
+                    ng-click="discoverUnpaired()"
+                     style="display: block;
+                    font-size: 12px;
+                    margin: 0 auto;"
+                    >getUnpairedList</button>
+            </div>
+            
+            <div class="col-75" >
+                <ion-list>
+                    <ion-item class="item-icon-right waves-effect waves-light" ng-repeat="bt in theModel.bluetoothUnpairedList"
+                              style="padding: 5px 5px 3px 0px;height:40px;display: block;"
+                              ng-click="onBluetoothClick(bt);"
+                              >
+                        <p class="ion-wifi">
+                            {{bt.name}} - {{bt.id}}
+                        </p>
+                        
+                        
+                        
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>
+        
+
+        
+        
+        <div class="row" style="margin-top: 5px;border-bottom: solid 1px black;">
+            <span>status: {{theModel.status}}</span>
+        </div>
+        
+        
+        <div class="row" style="margin-top: 5px;border-bottom: solid 1px black;">            
+            
+                <button  class="button button-assertive button-block" ng-click="disconnect()"
+                         ng-disabled="theModel.isConnected === false"
+                    style="display: block;
+                    font-size: 12px;
+                    "
+                    >Disconnect</button>             
+        </div>
+        
+         <div class="row" style="margin-top: 5px;border-bottom: solid 1px black;">            
+            <div class="col-40" >
+                <button class="button"
+                    ng-click="isConnected()"
+                     style="display: block;
+                    font-size: 12px;
+                    margin: 0 auto;"
+                    >Check if connected</button>
+            </div>
+            
+            <div class="col-60" >
+                <pre style="font-size: 8px">{{theModel.isConnected}}</pre>
+            </div>
+        </div>
+
+        
+           
+         
+        
+
+            <div class="row" style="margin-top: 5px;position: relative;
+                                                height: 45px;
+                                                width: 100%;
+                                                padding: 0px;">
+                <div class="" style="border-style: none;width:100%;">
+
+                    <input type="text"
+                           style="padding-left: 15px;
+                                                        padding-right: 15px;
+                                                        color: black;
+                                                        width: 100%;"
+                           ng-model="theModel.message"
+                           ng-keypress="write($event)"
+                           >
+
+                </div>
+
+            </div>
+
+            <label class="item item-input item-divider" style="margin-top: 10px;">
+                <textarea ng-model="theModel.onMessage" placeholder="output" style="color: #0811F7;height: 100px;font-size: 11px;"></textarea>
+            </label>
+
+        </div>
+    </ion-content>
+</ion-view>

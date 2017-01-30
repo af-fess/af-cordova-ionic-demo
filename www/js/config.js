@@ -37,6 +37,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
     }
   })
   
+  .state('tab.bt', {
+    url: '/bt',
+    views: {
+      'tab-bt': {
+        templateUrl: 'templates/tab-bluetooth.html',
+        controller: 'BTCtrl'
+      }
+    }
+  })
+  
 
   .state('tab.appsflyer', {
     url: '/appsflyer',
@@ -49,6 +59,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/wifi');
+  $urlRouterProvider.otherwise('/tab/bt');
 
 });
